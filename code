@@ -1,0 +1,19 @@
+import random
+
+class MoistureSensor:
+    def __init__(self, min_moisture, max_moisture):
+        self.min_moisture = min_moisture
+        self.max_moisture = max_moisture
+
+    def get_moisture_reading(self):
+        moisture = random.uniform(self.min_moisture, self.max_moisture)
+        return moisture
+
+# Example usage
+min_moisture = 0.0
+max_moisture = 1.0
+
+sensor = MoistureSensor(min_moisture, max_moisture)
+reading = sensor.get_moisture_reading()
+
+print(f"Moisture reading: {reading}")
